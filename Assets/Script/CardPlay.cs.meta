@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a18e5e87ee6d6cd4db089c189e45cbad
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - CardShoot: {fileID: 3358825590113349017, guid: c200247bb6d530d488bc4efd8816d6b6, type: 3}
+  - CardMove: {fileID: 7416582078568913861, guid: eec93cbc718d0cf4d9d084d28cc28989, type: 3}
+  - CardLoad: {fileID: 5435335609781748928, guid: 167fff7648a26464c935ba44581e3b16, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
