@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//========================================还没有开始做的悬停显示文字功能======================================
 public class CardPlay : MonoBehaviour
 {
     public GameObject Canvas;

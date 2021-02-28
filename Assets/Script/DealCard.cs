@@ -16,6 +16,7 @@ public class DealCard : MonoBehaviour
     }
     public void ClickToDeal()
     {
+        Debug.Log(PlayerManager.EnemyIsMove);
         string str;
         if(this.gameObject == CardShoot)
         {

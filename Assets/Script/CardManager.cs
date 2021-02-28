@@ -235,8 +235,8 @@ public class CardManager : MonoBehaviour
                     }
                     id++;
                 }
-                string strMS = "EnemyShoot";
-                BattleManager.SendMessage("CastDamage", strMS);
+                string strEM = "EnemyMove";
+                BattleManager.SendMessage("CastDamage", strEM);
             }
 
             if (cardname == "load")

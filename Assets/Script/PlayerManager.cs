@@ -19,6 +19,11 @@ public class PlayerManager : MonoBehaviour
     static public bool hasDB = false;
     static public bool PlayerOutOfRange = false;
     static public bool EnemyOutOfRange = false;
+    //==================2.0更新↓=======================
+    static public int PlayerId = 5;
+    static public bool PlayerIsMove = false;
+    static public int EnemyId = 12;
+    static public bool EnemyIsMove = false;
 
     //以下我根据表手动填写数据 我不会做成数据库调用 我是sb
 
@@ -96,13 +101,13 @@ public class PlayerManager : MonoBehaviour
 
             float luck;
 
-            if (MoveInput.NowDistance >= PlayerRAmin && MoveInput.NowDistance <= PlayerRAmax)
+            if (distance >= PlayerRAmin && distance <= PlayerRAmax)
                 luck = PlayerLuck * Mathf.Pow(PlayerContinous, PlayerContinousTime) * PlayerRangeAmend;
             else
                 luck = PlayerLuck * Mathf.Pow(PlayerContinous, PlayerContinousTime);
             playerrolltext.SendMessage("getPL", luck);
 
-            if (PlayerClip > 0 && MoveInput.NowDistance <= PlayerRangeMax && MoveInput.NowDistance >= PlayerRangeMin)
+            if (PlayerClip > 0 && distance <= PlayerRangeMax && distance >= PlayerRangeMin)
             {
                 if (roll <= luck)
                 {
@@ -110,7 +115,7 @@ public class PlayerManager : MonoBehaviour
                     EnemyHP -= PlayerDamage;
 
                     //伤害加成
-                    if (MoveInput.NowDistance >= DBRangeMin && MoveInput.NowDistance <= DBRangeMax)
+                    if (distance >= DBRangeMin && distance <= DBRangeMax)
                     {
                         Debug.Log("yes");
                         hasDB = true;
@@ -144,13 +149,13 @@ public class PlayerManager : MonoBehaviour
             enemyrolltext.SendMessage("getER", roll);
 
             float luck;
-            if(MoveInput.NowDistance >= EnemyRAmin && MoveInput.NowDistance <= EnemyRAmax)
+            if(distance >= EnemyRAmin && distance <= EnemyRAmax)
                 luck = EnemyLuck * Mathf.Pow(EnemyContinous, EnemyContinousTime) * EnemyRangeAmend;
             else
                 luck = EnemyLuck * Mathf.Pow(EnemyContinous, EnemyContinousTime);
             enemyrolltext.SendMessage("getEL", luck);
 
-            if (EnemyClip > 0 && MoveInput.NowDistance <= EnemyRangeMax && MoveInput.NowDistance >= EnemyRangeMin)
+            if (EnemyClip > 0 && distance <= EnemyRangeMax && distance >= EnemyRangeMin)
             {
                 if (roll <= luck)
                 {   
@@ -166,6 +171,18 @@ public class PlayerManager : MonoBehaviour
                 EnemyClip--;
         }
 
+        //==================2.0更新↓=======================
+        if (str == "PlayerMove")
+        {
+            PlayerIsMove = true;
+        }
+
+        if (str == "EnemyMove")
+        {
+            EnemyIsMove = true;
+        }
+        //==================2.0更新↑=======================
+
         if (str == "PlayerLoad")
         {
             if (PlayerClip < PlayerClipMax)
@@ -180,10 +197,30 @@ public class PlayerManager : MonoBehaviour
         
         
     }
-        
+
+    //==================2.0更新↓=======================
+    void getPlayerId(int result)
+    {
+        PlayerId = result;
+    }
+
+    void getPlayerIsMove(bool result)
+    {
+        PlayerIsMove = result;
+    }
+    void getEnemyId(int result)
+    {
+        EnemyId = result;
+    }
+
+    void getEnemyIsMove(bool result)
+    {
+        EnemyIsMove = result;
+    }
+
     void Update()
     {
-        
+        distance = Mathf.Abs(EnemyId - PlayerId);
     }
 
 }
