@@ -34,7 +34,7 @@ class WeaponList
     {
         Console.WriteLine("trigger Shotgun BeforeHook");
     }
-    // 毛瑟步枪
+    // 毛瑟步枪: 50% 的概率造成额外的伤害
     public static void Weapon_Musket_BeforeAttack(Battleground bg)
     {
         Console.WriteLine("trigger Musket BeforeAttack");
@@ -46,7 +46,6 @@ class WeaponList
                 bg.cats[(int)bg.curInTurn].weapon.damage += 3;
             }
         }
-        
     }
  
     // 左轮手枪

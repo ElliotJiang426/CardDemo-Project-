@@ -15,11 +15,13 @@ public class BasicCard : Card, IPointerClickHandler
         description = _description;
     }
 
+    // 点击卡牌时触发
     public void OnPointerClick(PointerEventData eventData)
     {
         BasicCard card = eventData.pointerCurrentRaycast.gameObject.GetComponent<BasicCard>();
         CastBasic(card);
     }
+    // 使用卡牌
     public void CastBasic(BasicCard card)
     {
         GameObject CardManager = GameObject.Find("CardManager");

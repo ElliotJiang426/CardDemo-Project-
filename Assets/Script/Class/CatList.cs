@@ -9,8 +9,8 @@ class CatList
     public static void Initialize()
     {
         // 定义委托函数数组
-        startTurnHookFunctions = new HookFunction[3];
-        endTurnHookFunctions = new HookFunction[3];
+        startTurnHookFunctions = new HookFunction[8];
+        endTurnHookFunctions = new HookFunction[8];
          
         // 回合开始 hook 函数
         startTurnHookFunctions[0] = new HookFunction(Cat_Player_StartTurn);

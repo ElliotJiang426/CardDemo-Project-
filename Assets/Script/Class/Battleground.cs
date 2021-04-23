@@ -29,25 +29,30 @@ public class Battleground
         shootCount = 0;
     }
 
+    // 开始回合
     public void StartTurn(){
+        // 调用猫猫特效
         Console.WriteLine((curInTurn == Turn.PLAYER?"Player ":"Enemy ") + "start turn " + this.curTurnNum);
         cats[(int)curInTurn].startTurnHookFunction(this);
         return;
     }
-
+    // 结束回合
     public void EndTurn(){
+        // 调用猫猫特效
         Console.WriteLine((curInTurn == Turn.PLAYER?"Player ":"Enemy ") + "End turn " + this.curTurnNum);
         cats[(int)curInTurn].endTurnHookFunction(this);
         UpdateDistance();
         ChangeTurn();
     }
-    
+    // 更新距离
     public void UpdateDistance(){
         distance = Mathf.Abs(location[0] - location[1]);
     }
+    // 更新位置
     public void UpdateLocation(Turn turn, int newLocation){
         location[(int)turn] = newLocation;
     }
+    // 切换回合
     public void ChangeTurn(){
         curInTurn = 1-curInTurn;
         if(curInTurn == Turn.PLAYER)

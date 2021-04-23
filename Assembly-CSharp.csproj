@@ -44,6 +44,7 @@
      <Compile Include="Assets\Script\CardManager.cs" />
      <Compile Include="Assets\Script\Class\BasicCard.cs" />
      <Compile Include="Assets\Script\UIFunction\RollResult.cs" />
+     <Compile Include="Assets\Script\Class\CatList.cs" />
      <Compile Include="Assets\Script\UIFunction\ClickPosition.cs" />
      <Compile Include="Assets\Script\PlayerManager.cs" />
      <Compile Include="Assets\Script\Class\Cat.cs" />
@@ -53,7 +54,6 @@
      <Compile Include="Assets\Script\UIFunction\TextShow.cs" />
      <Compile Include="Assets\Script\Class\SpellCard.cs" />
      <Compile Include="Assets\Script\Class\WeaponList.cs" />
-     <Compile Include="Assets\Script\Class\CatList.cs" />
     <Reference Include="UnityEngine">
         <HintPath>E:/unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

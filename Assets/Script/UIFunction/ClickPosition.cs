@@ -45,6 +45,7 @@ public class ClickPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(battleground);
         //若不在可移动范围内 则禁用按钮
         if (!PlayerManager.PlayerIsMove && !PlayerManager.EnemyIsMove)
             this.GetComponent<Button>().enabled = false;

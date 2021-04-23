@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 677, y: 342}
   m_MaxSize: {x: 12002, y: 8042}
   vertical: 0
-  controlID: 17534
+  controlID: 1590
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_MinSize: {x: 401, y: 342}
   m_MaxSize: {x: 8001, y: 8042}
   vertical: 1
-  controlID: 17535
+  controlID: 1569
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_MinSize: {x: 401, y: 221}
   m_MaxSize: {x: 8001, y: 4021}
   vertical: 0
-  controlID: 17536
+  controlID: 1570
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,7 +220,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6eb4ffff90bbffffa0bfffff64c3ffffc0c7ffff36ceffff1ad2ffff9ad6ffff2ee5ffff0ae9ffff42fbffff4867000090670000d26900001a6a0000ec6b0000346c00003c6e0000846e0000567000009e70000070720000b8720000c67400000e7500002a79000072790000
+      m_ExpandedIDs: 42fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -452,22 +452,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Prefabs
+    - Assets/Script
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Prefabs
+  - Assets/Script
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\catcard\CardDemo-Project-
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 12410000
-    m_LastClickedID: 16658
-    m_ExpandedIDs: 00000000004100000241000000ca9a3b
+    m_SelectedIDs: 26410000
+    m_LastClickedID: 16678
+    m_ExpandedIDs: 00000000244100002641000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -495,7 +495,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000004100000241000000ca9a3b
+    m_ExpandedIDs: 00000000244100002641000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -520,8 +520,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 1eb4ffff
-    m_LastClickedInstanceID: -19426
+    m_SelectedInstanceIDs: e40e0000
+    m_LastClickedInstanceID: 3812
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000d63b0000d2380000183d000000000000d43c0000d23c0000f44000009c4d0000
     m_RenameOverlay:
@@ -595,8 +595,8 @@ MonoBehaviour:
     y: 0
     width: 808
     height: 1307
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}

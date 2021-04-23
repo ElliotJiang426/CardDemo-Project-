@@ -13,17 +13,13 @@ public class PlayerManager : MonoBehaviour
     static public int enemyLnum;
 
     //一些用于UI的变量
-    public GameObject playerrolltext;
+    public GameObject playerrolltext; 
     public GameObject enemyrolltext;
     static public bool PlayerOutOfRange = false;
     static public bool EnemyOutOfRange = false;
     //==================3.0更新↓=======================
     static public bool PlayerIsMove = false;
     static public bool EnemyIsMove = false;
-
-    //血量
-    static public int PlayerHP = 20;
-    static public int EnemyHP = 20;
 
     // 武器
     static Weapon playerWeapon;
@@ -50,7 +46,10 @@ public class PlayerManager : MonoBehaviour
         enemyLnum = buttonToNext.enemyLnum;
 
         /*====================== 3.0 start ===================== */
+        // 初始化钩子函数
         WeaponList.Initialize();
+        CatList.Initialize();
+        
         // 武器
         playerWeapon = new Weapon("毛瑟步枪", 2, 6, 0.7f, 5, 3, 5, 0.8f, "test", WeaponList.beforeHookFunctions[0], WeaponList.afterHookFunctions[0]);
         enemyWeapon = new Weapon("左轮手枪", 1, 6, 0.8f, 4, 3, 6, 1f, "test", WeaponList.beforeHookFunctions[1], WeaponList.afterHookFunctions[1]);

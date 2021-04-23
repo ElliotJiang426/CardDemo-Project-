@@ -35,7 +35,7 @@ public class TextShow : MonoBehaviour
         EnemyHP.text = "HP:" + battleground.cats[1].hp;
 
         PlayerClip.text = "Clip:" + battleground.cats[0].weapon.clip.curClip + "/" + battleground.cats[0].weapon.clip.maxClip;
-        EnemyClip.text = "Clip:" + battleground.cats[1].weapon.clip.curClip + "/" + battleground.cats[1].weapon.clip.curClip;
+        EnemyClip.text = "Clip:" + battleground.cats[1].weapon.clip.curClip + "/" + battleground.cats[1].weapon.clip.maxClip;
 
 
     }

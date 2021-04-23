@@ -3,17 +3,14 @@ using UnityEngine;
 
 public class CardManager : MonoBehaviour
 {
-    public GameObject PlayerArea;
-    public GameObject EnemyArea;
+    public GameObject PlayerArea;   // 玩家手牌区
+    public GameObject EnemyArea;    // 敌人手牌区
 
-    public Dictionary<int, GameObject> PlayerHand = new Dictionary<int, GameObject>();//手牌
+    public Dictionary<int, GameObject> PlayerHand = new Dictionary<int, GameObject>();  // 玩家手牌
 
-    public Dictionary<int, GameObject> EnemyHand = new Dictionary<int, GameObject>();
+    public Dictionary<int, GameObject> EnemyHand = new Dictionary<int, GameObject>();   // 敌人手牌
 
     public GameObject BattleManager;
-
-    //记录回合
-    static public int turn = 0;
 
     /* ============= 3.0 start ============ */
     // battleground
@@ -37,9 +34,7 @@ public class CardManager : MonoBehaviour
     //更新信息
     void Update()
     {
-        //牌库剩余牌数
-        // PlayerDeckNum = PlayerDeck.Count;
-        // EnemyDeckNum = EnemyDeck.Count;
+
     }
 
     //点击结束回合时发牌
@@ -92,7 +87,7 @@ public class CardManager : MonoBehaviour
                 methodName = "";
                 break;
         }
-
+        // 调用 battleManager 对应函数
         BattleManager.SendMessage(methodName);
     }
     /* ======================= 3.0 END ====================== */
@@ -114,8 +109,6 @@ public class CardManager : MonoBehaviour
                 playerCard.transform.SetParent(PlayerArea.transform, false);
                
                 battleground.cats[0].cardList.DrawCardFromDeck(1);
-                //修改这张牌是手牌第几张的属性
-            // }
             /* ============== 3.0 end ============== */
         }
     }
@@ -134,7 +127,6 @@ public class CardManager : MonoBehaviour
 
                 enemyCard.transform.SetParent(EnemyArea.transform, false);
                 battleground.cats[1].cardList.DrawCardFromDeck(1);
-            // }
             /* ============== 3.0 end ============== */
         }
     }

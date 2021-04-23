@@ -19,8 +19,7 @@ public class MoveFunction : MonoBehaviour
             GameObject playerposition = Instantiate(position, new Vector3(0, 0, 0), Quaternion.identity);
             playerposition.transform.SetParent(MoveArea.transform, false);
 
-            // position.GetComponent<ClickPosition>().SetId(i);
-            //标id
+            // FIXME: 标id，unity 机制真的很奇怪
             if (i == 15)
                 position.GetComponent<ClickPosition>().SetId(0);
             else

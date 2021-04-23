@@ -12,7 +12,7 @@ public class CardPlay : MonoBehaviour
     public bool isHovering = false;
 
 
-    public void Awake() //定义Canvas面板
+    public void Start() //定义Canvas面板
     {
         Canvas = GameObject.Find("Canvas"); 
     }
