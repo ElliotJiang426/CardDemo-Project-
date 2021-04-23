@@ -14,18 +14,18 @@ public class MoveFunction : MonoBehaviour
     void Start()
     {
 
-        for (int i = 0;i < 16;i++)
+        for (int i = 0; i < 16; i++)
         {
             GameObject playerposition = Instantiate(position, new Vector3(0, 0, 0), Quaternion.identity);
             playerposition.transform.SetParent(MoveArea.transform, false);
 
+            // position.GetComponent<ClickPosition>().SetId(i);
             //标id
             if (i == 15)
-                position.GetComponent<ClickPosition>().SetId(1);
+                position.GetComponent<ClickPosition>().SetId(0);
             else
-                position.GetComponent<ClickPosition>().SetId(i + 2);
+                position.GetComponent<ClickPosition>().SetId(i + 1);
         }
-        
     }
 
     // Update is called once per frame

@@ -8,63 +8,47 @@ public class RollResult : MonoBehaviour
     public Text playerrollresult;
     public Text enemyrollresult;
 
-    static public int playerroll;
-    static public int playerluck;
-    static public int enemyroll;
-    static public int enemyluck;
-
-    static public bool DBsuccess = false;
-    static public bool hasDB = false;
+    static public int playerRoll;
+    static public int playerRollRange;
+    static public int enemyRoll;
+    static public int enemyRollRange;
 
     void Start()
     {
         playerrollresult.text = null;
     }
 
-    public void getPR(int result)
+    public void setPlayerRoll(int result)
     {
-        playerroll = result;
+        playerRoll = result;
     }
 
-    public void getPL(int result)
+    public void setPlayerRollRange(int result)
     {
-        playerluck = result;
+        playerRollRange = result;
     }    
 
-    public void getER(int result)
+    public void setEnemyRoll(int result)
     {
-        enemyroll = result;
+        enemyRoll = result;
     }
 
-    public void getEL(int result)
+    public void setEnemyRollRange(int result)
     {
-        enemyluck = result;
+        enemyRollRange = result;
     }    
 
     void Update()
     {
         if(PlayerManager.PlayerOutOfRange)
-        {
             playerrollresult.text = "射击失败！";
-        }
         else
-        {
-            if (PlayerManager.hasDB)
-            {
-                if (PlayerManager.DBSuccess)
-                    playerrollresult.text = "roll点结果：" + playerroll + "/" + playerluck + "    伤害加成:成功";
-                else
-                    playerrollresult.text = "roll点结果：" + playerroll + "/" + playerluck + "    伤害加成:失败";
-            }
-            else
-                playerrollresult.text = "roll点结果：" + playerroll + "/" + playerluck;
-        }
+            playerrollresult.text = "roll点结果：" + playerRoll + "/" + playerRollRange + (playerRollRange == 0?"":(playerRoll <= playerRollRange? " 命中!":" MISS!"));
 
         if(PlayerManager.EnemyOutOfRange)
-        {
             enemyrollresult.text = "射击失败！";
-        }
-        else enemyrollresult.text = "roll点结果：" + enemyroll + "/" + enemyluck;
+        else 
+            enemyrollresult.text = "roll点结果：" + enemyRoll + "/" + enemyRollRange + (enemyRollRange == 0?"":(enemyRoll <= enemyRollRange? " 命中!":" MISS!"));
 
     }
 }
